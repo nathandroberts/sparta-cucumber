@@ -1,5 +1,6 @@
 require 'capybara/cucumber'
-require 'capybara/dsl'
+require 'rspec'
+require 'pry'
 require_relative '../lib/bbc_site'
 
 # The below line of code now means that the chrome driver is registered before every run.
@@ -14,6 +15,7 @@ Capybara.configure do |config|
   config.default_max_wait_time= 10 #wait time for asynchronus processes to finsh
   config.match = :prefer_exact #this setting is to ensure Capybara has specific matching rather than fuzzy logic
   config.default_driver = :chrome # ensures chrome is the default driver
+  config.app_host = 'https://www.bbc.co.uk/' # provides the app host/core url
 end
 
 World(BbcSite)
