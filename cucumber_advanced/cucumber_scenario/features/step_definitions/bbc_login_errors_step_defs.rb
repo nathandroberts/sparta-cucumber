@@ -26,14 +26,14 @@ end
 Then(/^I receive the corresponding error (.*)$/) do |error_message|
   expect(bbc_register_page.check_error_message).to eq error_message
 end
-When(/^I input the necessary details with the postcode details (.*)$/) do |postcode|
-  bbc_register_page.fill_in_email("#{rand(999999)}test@gmail.com")
-
-  bbc_register_page.fill_in_password('Password4test')
-
-  bbc_register_page.password_field.send_keys :tab
-
-  bbc_register_page.fill_in_postcode('Password4test')
-
-  bbc_register_page.postcode_field.send_keys :tab
-end
+# When(/^I input the necessary details with the postcode details (.*)$/) do |postcode|
+#   bbc_register_page.fill_in_email("#{rand(999999)}test@gmail.com")
+#
+#   bbc_register_page.fill_in_password('Password4test')
+#
+#   bbc_register_page.password_field.send_keys :tab
+#
+#   bbc_register_page.fill_in_postcode('Password4test')
+#
+#   bbc_register_page.postcode_field.send_keys :tab
+# end
