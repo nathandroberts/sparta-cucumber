@@ -19,14 +19,14 @@ Feature: User login
     | 12345678                                            | Sorry, that password isn't valid. Please include a letter.                     |
     | {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{a | Sorry, that password is too long. It can't be more than 50 characters.         |
 
-  Scenario Outline: If I input incorrect password details I will receive the correct error message
-    Given I am on the BBC home page
-    And I move to the sign in page
-    When I proceed to register
-    And I input my DOB
-    And I input the necessary details with the postcode details <postcode>
-    Then I receive the corresponding error <error>
-
-    Examples:
-    | postcode    |                          error                      |
-    |             |  Something's missing. Please check and try again.   |
+  # Scenario Outline: If I input incorrect password details I will receive the correct error message
+  #   Given I am on the BBC home page
+  #   And I move to the sign in page
+  #   When I proceed to register
+  #   And I input my DOB
+  #   And I input the necessary details with the postcode details <postcode>
+  #   Then I receive the corresponding error <error>
+  #
+  #   Examples:
+  #   | postcode    |                          error                      |
+  #   |             |  Something's missing. Please check and try again.   |
